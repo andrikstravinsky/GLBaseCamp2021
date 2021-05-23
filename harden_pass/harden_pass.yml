@@ -1,0 +1,5 @@
+---
+- name: Hardening passwords
+  hosts: dev
+  roles: 
+    - harden_pass 

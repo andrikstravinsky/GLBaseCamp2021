@@ -1,0 +1,5 @@
+---
+- name: Harden by reject passwords like username
+  become: true
+  shell: apt install -y libpam-cracklib && sed -i 's/\bpam_cracklib.so\b/& enforce_for_root reject_username/' /etc/pam.d/common-password
+ 
