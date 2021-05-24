@@ -1,0 +1,13 @@
+---
+- name: Harden by reject passwords like username
+  become: true
+  pamd:
+    name: common-password
+    type: password
+    control: "[success=1 default=ignore]"
+    module_path: pam_unix.so
+    new_type: password
+    new_control: required
+    new_module_path: pam_cracklib.so
+    module_arguments: 'reject_username enforce_for_root'
+    state: before
