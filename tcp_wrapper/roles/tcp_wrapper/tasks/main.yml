@@ -1,0 +1,4 @@
+---
+- name: TCP wrapper for sshd
+  become: true
+  shell: 'echo "sshd : localhost 95.132.144.191" | tee -a /etc/hosts.allow && echo "sshd : ALL" | tee -a /etc/hosts.deny' 
