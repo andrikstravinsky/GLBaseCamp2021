@@ -1,0 +1,20 @@
+---
+- name: Allow localhost and verified remote host to sshd
+  become: true
+  lineinfile:
+    path: /etc/hosts.allow
+    line: "sshd : {{localnode}} {{remote_node}}"
+    owner: root
+    group: root
+    mode: "0644" 
+
+
+- name: Deny all connections to sshd
+  become: true
+  lineinfile:
+    path: /etc/hosts.deny
+    line: "sshd : ALL"
+    owner: root
+    group: root
+    mode: "0644"
+   
