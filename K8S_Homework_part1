@@ -1,0 +1,5 @@
+https://asciinema.org/a/1kcjWpLX90e5gjJsowVjiILwn - Run image with runc + create new image and push to docker hub
+
+https://asciinema.org/a/NEdX6H1sy0IJtmXoFOgnHkDf0 - Create deployment in the KIND 
+
+https://hub.docker.com/repository/docker/andrikstravinsky/my_webserver
