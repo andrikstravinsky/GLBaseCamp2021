@@ -1,0 +1,3 @@
+This the example of canary deployment using the the easy way - by scalling app/v1 to 9 replicas and 
+creating 1 replica of app/v2.
+Asciinema recording for this part - https://asciinema.org/a/uPRX4hZJbcVdLTTiN54jXCckX

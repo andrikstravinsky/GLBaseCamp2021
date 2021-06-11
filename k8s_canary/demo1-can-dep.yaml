@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+  labels:
+    app: demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: demo
+        version: v1
+    spec:
+      containers:
+      - name: demo
+        image: andrikstravinsky/my_webserver@sha256:952783d00b59cc5b00acc6f5f181f5d6528715cc9383cc5f175165ce1de403d0
+        ports:
+          - containerPort: 8000

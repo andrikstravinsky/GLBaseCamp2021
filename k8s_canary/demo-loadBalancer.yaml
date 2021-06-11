@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-lb
+spec:
+  selector:
+    run: demo
+  ports:
+    - port: 80
+      targetPort: 8000
+  type: LoadBalancer

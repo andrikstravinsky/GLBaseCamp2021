@@ -1,0 +1,15 @@
+Report for the second part of homework basecamp4.
+
+In this part app-secret-env was deployed.
+
+Then app-multicontainer was deployed to K8S. 
+app-multicontainer was exposed using service type LoadBalancer.
+After that this app was exposed outside the cluster using the service type NodePort
+Asciinema recording of this part - https://asciinema.org/a/BgZEVECBEJuyEJubtCCL22VDL
+It definitely was not so easy for the first time, so here is another asciinema with some 
+troubleshooting steps - https://asciinema.org/a/K1u3cXJ51jfhq9OAEqof13dY6
+
+The next step was to get access from the outside of cluster without using LoadBalancer. 
+I am not sure I understood the task properly, so I used Ingress for this. It is not the service type LoadBalancer
+but loadbalancer (nginx) was used anyway. 
+Asciinema recording for it - https://asciinema.org/a/nT4M6fnmxc1I3Yfuhjiug3rUO
